@@ -89,19 +89,19 @@ select {
 }
 
 .main-nav a {
-  color: #5f6b78;
+  color: #000000;
   font-weight: 600;
   transition: color 0.2s ease;
 }
 
 .main-nav a:hover,
 .main-nav a[aria-current=page] {
-  color: #0072B9;
+  color: #004ab9;
 }
 
 .hero {
   padding: 5rem 0 3rem;
-  background-image: linear-gradient(135deg, #0072B9, #00DF89);
+  background-image: linear-gradient(135deg, #004ab9, #10be67);
   color: #fff;
 }
 
@@ -195,8 +195,59 @@ select {
 
 .section-subtitle {
   max-width: 780px;
-  color: #5f6b78;
+  color: #000000;
   margin-bottom: 2rem;
+}
+
+.section-offset {
+  margin-top: 2rem;
+}
+
+.donation-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.qui-sommes-nous-content {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.donation-list li,
+.contact-note {
+  padding: 0.5rem 0;
+  color: #112233;
+}
+
+.contact-note--spaced {
+  margin-top: 0.8rem;
+}
+
+.form-field {
+  margin-bottom: 1.5rem;
+}
+
+.form-field label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+}
+
+.form-control {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #dbe1ea;
+  border-radius: 12px;
+  font-size: 1rem;
+}
+
+.form-control:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(0, 74, 185, 0.12);
+  border-color: #004ab9;
 }
 
 .page-intro {
@@ -216,7 +267,7 @@ select {
   border-radius: 24px;
   box-shadow: 0 22px 65px rgba(17, 34, 51, 0.08);
   overflow: hidden;
-  background-color: #00DF89;
+  background-color: #10be67;
 }
 
 .card-content,
@@ -239,10 +290,9 @@ select {
 .person-card p,
 .feature-card p,
 .contact-card p,
-.section-subtitle,
 .content-text {
   margin: 0;
-  color: #5f6b78;
+  color: white;
 }
 
 .priority-card img,
@@ -277,12 +327,12 @@ select {
   font-size: 3.5rem;
   font-weight: 700;
   color: #fff;
-  background: #0072B9;
+  background: #004ab9;
   box-shadow: 0 10px 24px rgba(17, 34, 51, 0.12);
 }
 
 .section-light .priority-card:nth-of-type(2n)::before {
-  background: #00DF89;
+  background: #10be67;
 }
 
 .feature-card {
@@ -326,6 +376,10 @@ select {
   grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 
+h3 {
+  color: #004ab9;
+}
+
 article > h3 {
   margin-top: 0;
 }
@@ -336,12 +390,12 @@ section article {
 
 .footer {
   padding: 4rem 0 2rem;
-  background-image: linear-gradient(135deg, #0072B9, #00DF89);
+  background-image: linear-gradient(135deg, #004ab9, #10be67);
   color: #e6eef8;
 }
 
 .footer .container {
-  display: block;
+  display: flex;
 }
 
 .footer-grid {
@@ -477,7 +531,7 @@ section article {
 
 ul.list-bullet {
   padding-left: 1.25rem;
-  color: #5f6b78;
+  color: #000000;
 }
 
 ul.list-bullet li {

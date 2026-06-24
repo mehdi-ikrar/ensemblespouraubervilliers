@@ -2,9 +2,9 @@ $bg: #f8f9fb;
 $surface: #ffffff;
 $surface-alt: #f1f4f8;
 $text: #112233;
-$muted: #5f6b78;
-$primary: #0072B9;
-$secondary: #00DF89;
+$muted: #000000;
+$primary: #004ab9;
+$secondary: #10be67;
 $accent: #f28f1b;
 $accent-soft: #fff2df;
 $border: #dbe1ea;
@@ -213,6 +213,55 @@ select {
   margin-bottom: 2rem;
 }
 
+.section-offset {
+  margin-top: 2rem;
+}
+
+.donation-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.qui-sommes-nous-content {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+.donation-list li,
+.contact-note {
+  padding: 0.5rem 0;
+  color: $text;
+}
+
+.contact-note--spaced {
+  margin-top: 0.8rem;
+}
+
+.form-field {
+  margin-bottom: 1.5rem;
+}
+
+.form-field label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+}
+
+.form-control {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid $border;
+  border-radius: 12px;
+  font-size: 1rem;
+}
+
+.form-control:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba($primary, 0.12);
+  border-color: $primary;
+}
+
 .page-intro {
   display: grid;
   grid-template-columns: minmax(0, 1.2fr) minmax(0, 0.8fr);
@@ -246,6 +295,7 @@ select {
 .contact-card h3 {
   margin: 0 0 0.8rem;
   font-size: 1.25rem;
+  
 }
 
 .card p,
@@ -253,10 +303,9 @@ select {
 .person-card p,
 .feature-card p,
 .contact-card p,
-.section-subtitle,
 .content-text {
   margin: 0;
-  color: $muted;
+  color: white;
 }
 
 .priority-card img,
@@ -338,7 +387,9 @@ select {
 .columns-3 {
   grid-template-columns: repeat(3, minmax(0, 1fr));
 }
-
+h3{
+  color: $primary;
+}
 article > h3 {
   margin-top: 0;
 }
@@ -349,12 +400,12 @@ section article {
 
 .footer {
   padding: 4rem 0 2rem;
-    background-image: linear-gradient(135deg, $primary, $secondary);
+  background-image: linear-gradient(135deg, $primary, $secondary);
   color: #e6eef8;
 }
 
 .footer .container {
-  display: block;
+  display: flex;
 }
 
 .footer-grid {
