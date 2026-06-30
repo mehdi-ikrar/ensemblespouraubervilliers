@@ -1057,10 +1057,6 @@ article {
   background-image: linear-gradient(135deg, $primary, $secondary);
   color: #e6eef8;
 
-  .container {
-    display: flex;
-  }
-
   h3 {
     margin: 0 0 1rem;
     color: #ffffff;
@@ -1090,6 +1086,7 @@ article {
   display: grid;
   gap: 2rem;
   grid-template-columns: 1.4fr 1fr 1fr;
+  min-width: 0;
 }
 
 .footer-brand {
@@ -1116,6 +1113,8 @@ article {
 }
 
 .footer-section {
+  min-width: 0;
+
   p {
     margin: 0.55rem 0;
     line-height: 1.75;
@@ -1151,6 +1150,7 @@ article {
   align-items: center;
   flex-wrap: wrap;
   gap: 1rem;
+  min-width: 0;
 }
 
 .footer-bottom p {
@@ -1173,6 +1173,11 @@ article {
 @media (max-width: 620px) {
   .footer {
     padding: 3rem 0 1.5rem;
+  }
+
+  .footer a,
+  .footer p {
+    overflow-wrap: anywhere;
   }
 
   .footer-brand p,
@@ -1672,6 +1677,12 @@ body {
   background-attachment: scroll;
 }
 
+.menu-toggle {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+
 .nav-toggle {
   display: none;
 }
@@ -1691,24 +1702,46 @@ body {
 @media (max-width: 780px) {
   .site-header .container {
     align-items: center;
+    justify-content: space-between;
     padding: 0.75rem 0;
+    flex-wrap: wrap;
+  }
+
+  .nav-toggle {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 2.4rem;
+    padding: 0.35rem 0.85rem;
+    border-radius: 999px;
+    border: 1px solid rgba(0, 74, 185, 0.3);
+    background: #ffffff;
+    color: var(--brand-blue);
+    font-weight: 700;
+    cursor: pointer;
   }
 
   .main-nav {
-    display: flex;
-    width: auto;
-    flex-direction: row;
-    gap: 0.35rem;
-    margin-top: 0;
-    padding: 0;
-    overflow-x: auto;
-    border-top: 0;
-    scrollbar-width: thin;
+    display: none;
+    width: 100%;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.25rem;
+    margin-top: 0.7rem;
+    padding: 0.4rem 0;
+    border-top: 1px solid rgba(0, 74, 185, 0.14);
+    overflow: visible;
+    scrollbar-width: auto;
   }
 
   .main-nav a {
-    white-space: nowrap;
-    padding: 0.4rem 0.72rem;
+    white-space: normal;
+    width: 100%;
+    padding: 0.62rem 0.72rem;
+  }
+
+  .menu-toggle:checked + .nav-toggle + .main-nav {
+    display: flex;
   }
 }
 
