@@ -206,10 +206,19 @@ button, input, textarea, select { font: inherit; }
   padding: 1.7rem;
 }
 
-.card, .priority-card, .person-card, .contact-card {
+.card, .feature-card, .priority-card, .person-card, .contact-card {
   h3 {
     margin: 0 0 0.8rem;
     font-size: 1.25rem;
+  }
+
+  .video-date, time.video-date {
+    margin: 0 0 0.6rem;
+    color: $accent;
+    font-size: 0.85rem;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
   }
 
   p {
@@ -1400,8 +1409,17 @@ ul.list-bullet li {
 
   .flyers-grid,
   .documents-grid,
-  .videos-grid {
+  .videos-grid,
+  .home-videos-grid,
+  .grid.columns-3 {
     grid-template-columns: 1fr !important;
+  }
+
+  .videos-grid .card-content p,
+  .home-videos-grid .card-content p,
+  .priority-card p,
+  .programme-priorite-card p {
+    display: none;
   }
 
   .team-list-grid {

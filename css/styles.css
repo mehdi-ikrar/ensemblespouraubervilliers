@@ -214,11 +214,19 @@ button, input, textarea, select {
   padding: 1.7rem;
 }
 
-.card h3, .priority-card h3, .person-card h3, .contact-card h3 {
+.card h3, .feature-card h3, .priority-card h3, .person-card h3, .contact-card h3 {
   margin: 0 0 0.8rem;
   font-size: 1.25rem;
 }
-.card p, .priority-card p, .person-card p, .contact-card p {
+.card .video-date, .card time.video-date, .feature-card .video-date, .feature-card time.video-date, .priority-card .video-date, .priority-card time.video-date, .person-card .video-date, .person-card time.video-date, .contact-card .video-date, .contact-card time.video-date {
+  margin: 0 0 0.6rem;
+  color: #f28f1b;
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+.card p, .feature-card p, .priority-card p, .person-card p, .contact-card p {
   margin: 0;
   color: white;
 }
@@ -1295,8 +1303,16 @@ ul.list-bullet li {
   }
   .flyers-grid,
   .documents-grid,
-  .videos-grid {
+  .videos-grid,
+  .home-videos-grid,
+  .grid.columns-3 {
     grid-template-columns: 1fr !important;
+  }
+  .videos-grid .card-content p,
+  .home-videos-grid .card-content p,
+  .priority-card p,
+  .programme-priorite-card p {
+    display: none;
   }
   .team-list-grid {
     grid-template-columns: 1fr !important;
