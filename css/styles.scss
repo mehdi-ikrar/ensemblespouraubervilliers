@@ -323,19 +323,20 @@ button, input, textarea, select { font: inherit; }
     position: absolute;
     top: 1rem;
     left: 1rem;
-    width: 6rem;
-    height: 3rem;
-    @include flex-center;
-    border-radius: 999px;
+    width: auto;
+    height: auto;
+    padding: 0;
     font-size: 3.5rem;
     font-weight: 700;
-    color: #fff;
-    background: $primary;
-    box-shadow: 0 10px 24px rgba(17, 34, 51, 0.12);
+    line-height: 1;
+    color: $primary;
+    background: transparent;
+    border: 0;
+    box-shadow: none;
   }
 
   &:nth-of-type(2n)::before {
-    background: $secondary;
+    color: $secondary;
   }
 }
 
@@ -1720,16 +1721,20 @@ body {
 }
 
 .section-light .priority-card::before {
-  background: #ffffff;
+  background: transparent;
   color: var(--brand-blue);
-  border: 1px solid rgba(0, 74, 185, 0.24);
-  box-shadow: 0 10px 20px rgba(9, 26, 46, 0.12);
+  border: 0;
+  box-shadow: none;
+  border-radius: 0;
+  width: auto;
+  height: auto;
+  padding: 0;
 }
 
 .section-light .priority-card:nth-of-type(2n)::before {
-  background: #ffffff;
+  background: transparent;
   color: var(--brand-green);
-  border-color: rgba(16, 190, 103, 0.3);
+  border-color: transparent;
 }
 
 .actualites-chip {
