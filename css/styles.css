@@ -220,7 +220,7 @@ button, input, textarea, select {
 }
 .card .video-date, .card time.video-date, .feature-card .video-date, .feature-card time.video-date, .priority-card .video-date, .priority-card time.video-date, .person-card .video-date, .person-card time.video-date, .contact-card .video-date, .contact-card time.video-date {
   margin: 0 0 0.6rem;
-  color: #f28f1b;
+  color: rgb(163, 2, 2);
   font-size: 0.85rem;
   font-weight: 700;
   letter-spacing: 0.04em;
@@ -837,11 +837,6 @@ button, input, textarea, select {
   animation-range: entry 0% cover 35%;
 }
 
-@supports (animation-timeline: view()) {
-  .team-scroll {
-    animation-timeline: view();
-  }
-}
 @media (prefers-reduced-motion: reduce) {
   .team-reveal,
   .team-scroll,
